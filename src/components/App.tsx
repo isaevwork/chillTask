@@ -1,0 +1,1 @@
+import React from "react"const App = () => {    return (        <div>            <h2>This is example of quick start {"->"} React + TypeScript</h2>        </div>    )}export default App
