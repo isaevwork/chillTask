@@ -1,1 +1,1 @@
-import React from "react"const App = () => {    return (        <div>            <h2>This is example of quick start {"->"} React + TypeScript</h2>        </div>    )}export default App
+import React from "react"import '../index.scss'import Mounter from "./Counter/Counter";const App = () => {    return (        <div className={"app"}>            dsadsad            <Mounter />        </div>    )}export default App

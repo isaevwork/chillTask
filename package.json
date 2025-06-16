@@ -1,23 +1,24 @@
 {
-  "name": "wwfun",
+  "name": "timekeeper",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --open",
-    "build": "webpack"
+    "start": "webpack serve --env port=3000",
+    "build:prod": "webpack --env mode=production",
+    "build:dev": "webpack --env mode=development"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isaevwork/wwfun.git"
+    "url": "git+https://github.com/isaevwork/timeKeeper"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/isaevwork/wwfun/issues"
+    "url": "https://github.com/isaevwork/timeKeeper/issues"
   },
-  "homepage": "https://github.com/isaevwork/wwfun#readme",
+  "homepage": "https://github.com/isaevwork/timeKeeper#readme",
   "description": "",
   "dependencies": {
     "react": "^19.1.0",
@@ -28,14 +29,18 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@types/webpack": "^5.28.5",
-    "@types/webpack-dev-server": "^4.7.1",
+    "css-loader": "^6.10.0",
     "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.89.2",
+    "sass-loader": "^16.0.5",
     "source-map-loader": "^5.0.0",
+    "style-loader": "^4.0.0",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
+    "webpack-dev-server": "^5.0.0"
   }
 }
