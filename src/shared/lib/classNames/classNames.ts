@@ -1,0 +1,10 @@
+export const classNames = (cls: string, mods: Record<string, string | boolean>, additional: string[]) => {
+    return [
+        cls,
+        ...additional,
+        ...Object.entries(mods)
+            .filter(([key, value]) => Boolean(value))
+            .map(([key]) => key)
+    ]
+        .join(' ')
+}
