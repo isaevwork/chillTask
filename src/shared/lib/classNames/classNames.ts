@@ -1,10 +1,11 @@
-export const classNames = (cls: string, mods: Record<string, string | boolean>, additional: string[]) => {
+export const classNames = (cls: string, mods: Record<string, string | boolean> = {}, additional: Array<string | undefined> = []) => {
     return [
         cls,
-        ...additional,
+        ...additional.filter(Boolean),
         ...Object.entries(mods)
-            .filter(([key, value]) => Boolean(value))
+            .filter(([_, value]) => Boolean(value))
             .map(([key]) => key)
     ]
+        .filter(Boolean)
         .join(' ')
 }

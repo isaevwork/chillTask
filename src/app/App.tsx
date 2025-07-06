@@ -1,20 +1,16 @@
 import React from "react"
-import '../index.scss'
-import Mounter from "../features/components/Counter/Counter";
-import TimeCounter from "../features/components/TimeCounter/TimeCounter";
-import {Route, Routes} from "react-router-dom";
+import './index.scss'
+
 import {classNames} from "shared/lib/classNames/classNames";
-import {Home} from "pages/home"; // Через алиас из tsconfig
+import {AppRouter} from "app/providers/router";
+import {Navbar} from "widgets/navbar/ui";
 
 const App = () => {
 
     return (
         <div className={classNames('apptest', {hovered: true}, ['amg'])}>
-            <Routes>
-               <Route  path="/" element={<Home />} />
-               <Route  path="/mounter" element={<Mounter />} />
-               <Route  path="/timecounter" element={<TimeCounter />} />
-            </Routes>
+            <Navbar />
+            <AppRouter />
         </div>
     )
 }
