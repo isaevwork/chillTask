@@ -1,1 +1,13 @@
-import React from "react"import classes from "./Counter.module.scss"const Mounter = () => {    const [state, setState] = React.useState(0)    const onMinus = () => {        setState(prevState => prevState - 1)    }    const onPlus = () => {        setState(prevState => prevState + 1)    }    return (        <div className={classes.btn}>            <h1>This is example of {"->"} React + TypeScript</h1>            <h2>{state}</h2>            <div >                <button onClick={onMinus}>-</button>                <button onClick={onPlus}>+</button>            </div>        </div>    )}export default Mounter
+import React from 'react';
+import classes from './Counter.module.scss';
+
+const Mounter = () => {
+  return (
+    <div className={classes.btn}>
+      <h1>Главная страница</h1>
+      <h2>state</h2>
+    </div>
+  );
+};
+
+export default Mounter;

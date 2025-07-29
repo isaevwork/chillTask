@@ -1,0 +1,1 @@
+@use "../../../../src/app/styles/variables/global";.mainPage {  width: 100%;  display: flex;  .centerArea {    display: flex;    flex-direction: column;    width: 100%;    background: var(--primary-color);    border: 1px solid var(--secondary-color);    margin: 15px 15px 15px 0;    border-radius: var(--border-radius);  }}
