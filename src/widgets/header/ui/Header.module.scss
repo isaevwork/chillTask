@@ -1,0 +1,17 @@
+@use "../../../app/styles/variables/global" as *;
+
+.header {
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--header-color);
+  color: black;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+  .mainBlock {
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+    min-height: 100%;
+    align-items: center;
+  }
+}

@@ -1,0 +1,50 @@
+.navbarItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--iconDefaultColor);
+  transition: color 0.3s;
+
+  .iconWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 35px;
+    border-radius: var(--border-radius);
+
+    &:hover,
+    &:focus {
+      background: var(--hover);
+      transform: scale(1.1);
+
+    }
+  }
+
+  .noBackground {
+    &:hover,
+    &:focus {
+      background: transparent ;
+      transform: scale(1.1);
+    }
+  }
+
+  .iconTitle {
+    font-size: 11px;
+    font-family: "monospace", sans-serif;
+    line-height: 24px;
+  }
+}
+
+.active {
+  color: var(--iconActiveColor);
+  .iconWrapper {
+    background: var(--hover);
+  }
+  .noBackground {
+    background: transparent;
+  }
+}

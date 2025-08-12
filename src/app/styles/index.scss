@@ -1,1 +1,13 @@
-@use "reset";@use "variables/global";.app {  font: var(--font-m);  color: var(--color-text);  background: var(--bg-color);  min-height: 100vh;  margin: 0 auto;}
+@use "reset";
+@use "variables/global";
+
+
+.app {
+  font: var(--font-m);
+  color: var(--color-text);
+
+  background: var(--bg-color);
+  min-height: 100vh;
+  margin: 0 auto;
+
+}
