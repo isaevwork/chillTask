@@ -1,0 +1,15 @@
+{
+  "name": "@timekeeper/shared",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "lint": "echo 'No linting configured for shared package'"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
