@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles/index.scss';
-
-import { MainPage } from 'pages/home';
+import { MainPage } from '@/pages/home';
 
 const App = () => {
   return (

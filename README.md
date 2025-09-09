@@ -1,6 +1,6 @@
-# TimeKeeper
+# ChillTask
 
-Простое приложение для учета времени с React фронтендом и Express бэкендом.
+Простое приложение для учета времени с React фронтендом.
 
 ## Быстрый старт
 
@@ -17,24 +17,20 @@ npm run dev
 ```
 apps/
 ├── frontend/     # React приложение (порт 3000)
-└── backend/      # Express API (порт 3001)
 packages/
 └── shared/       # Общие типы
 ```
 
-## API
+## Технологии
 
-- `GET /time-entries` - получить все записи
-- `POST /time-entries` - создать запись
-- `GET /time-entries/current` - текущая сессия
-- `POST /time-entries/stop` - остановить сессию
+- **Frontend**: React 19, TypeScript, Vite, SCSS Modules
+- **Monorepo**: npm workspaces
 
 ## Команды
 
 ```bash
-npm run dev              # Запуск фронтенда + бэкенда
+npm run dev              # Запуск фронтенда
 npm run dev:frontend     # Только фронтенд
-npm run dev:backend      # Только бэкенд
 npm run build            # Сборка
 npm run lint             # Линтинг
 ```

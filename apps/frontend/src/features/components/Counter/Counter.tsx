@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './Counter.module.scss';
 
-const Mounter = () => {
+const Counter = () => {
   return (
     <div className={classes.btn}>
       <h1>Главная страница</h1>
@@ -10,4 +10,4 @@ const Mounter = () => {
   );
 };
 
-export default Mounter;
+export default Counter;

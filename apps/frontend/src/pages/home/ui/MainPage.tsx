@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import cls from './MainPage.module.scss';
-import { Header } from 'widgets/header';
-import { Navbar } from 'widgets/navbar';
-import { AppRouter } from 'app/providers/router';
+import { Header } from '@/widgets/header';
+import { Navbar } from '@/widgets/navbar';
+import { AppRouter } from '@/app/providers/router';
 
 export const MainPage = () => {
   return (

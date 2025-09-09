@@ -1,0 +1,12 @@
+# Cursor IDE - исключения для Git
+
+# Персональные настройки (если есть)
+personal/
+user-specific/
+
+# Временные файлы
+*.tmp
+*.temp
+
+# Локальные конфигурации
+local-config.md

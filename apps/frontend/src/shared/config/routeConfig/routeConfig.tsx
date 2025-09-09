@@ -1,4 +1,4 @@
-import { MainPage } from 'pages/home';
+import { MainPage } from '@/pages/home';
 
 const enum AppRouter {
   MAIN = 'main',

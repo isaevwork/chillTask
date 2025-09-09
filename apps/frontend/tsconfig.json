@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "target": "ES5",
-    "module": "ES6",
+    "target": "ES2020",
+    "module": "ESNext",
     "jsx": "react-jsx",
     "strict": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -14,15 +14,17 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "*": ["./src/*"],
+      "@/*": ["./src/*"],
       "@shared/*": ["../../packages/shared/src/*"]
-    }
+    },
+    "types": ["vite/client"],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "isolatedModules": true,
+    "noEmit": true,
+    "useDefineForClassFields": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true
   },
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS"
-    }
-  },
-  "include": ["src/**/*", "config/**/*", "global.d.ts", "webpack.config.ts"],
-  "exclude": ["dist", "node_modules"]
+  "include": ["src/**/*", "vite.config.ts", "global.d.ts", "vite-env.d.ts"],
+  "exclude": ["dist", "node_modules", "config"]
 }

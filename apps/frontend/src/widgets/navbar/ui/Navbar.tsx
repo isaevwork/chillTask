@@ -1,12 +1,12 @@
 import React from 'react';
 import cn from 'classnames';
 import cls from './Navbar.module.scss';
-import MenuIcon from '../../../shared/assets/icons/menu_icon.svg';
-import { NavbarItem } from 'shared/NavbarItem';
+import MenuIcon from '../../../shared/assets/icons/menu_icon.svg?react';
+import { NavbarItem } from '@/shared/NavbarItem';
 import { Link } from 'react-router-dom';
-import TimerIcon from 'shared/assets/icons/timer_icon.svg';
-import CalendarIcon from 'shared/assets/icons/calendar_icon.svg';
-import AccountIcon from 'shared/assets/icons/account_icon.svg';
+import TimerIcon from '@/shared/assets/icons/timer_icon.svg?react';
+import CalendarIcon from '@/shared/assets/icons/calendar_icon.svg?react';
+import AccountIcon from '@/shared/assets/icons/account_icon.svg?react';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);

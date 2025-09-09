@@ -1,6 +1,5 @@
-@use "reset";
-@use "variables/global";
-
+@use './reset.scss';
+@use './variables/global.scss';
 
 .app {
   font: var(--font-m);
@@ -9,5 +8,4 @@
   background: var(--bg-color);
   min-height: 100vh;
   margin: 0 auto;
-
 }
