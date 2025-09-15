@@ -21,8 +21,6 @@ export const NavbarItem: FC<NavbarItemProps> = ({
   const location = useLocation();
   console.log(location);
 
-  console.log(cls);
-
   return (
     <NavLink
       to={to}

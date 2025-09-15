@@ -1,0 +1,92 @@
+@use '../../../app/styles/variables/global.scss';
+
+.userProfile {
+  padding: 24px;
+  min-width: 300px;
+  text-align: center;
+  background: var(--primary-color);
+  border-radius: var(--border-radius);
+  color: var(--color-text);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.avatar {
+  margin-bottom: 16px;
+
+  img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.avatarPlaceholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--iconDefaultColor);
+  margin: 0 auto;
+}
+
+.info {
+  margin-bottom: 24px;
+}
+
+.name {
+  font: var(--font-l);
+  margin: 0 0 8px 0;
+  color: var(--iconActiveColor);
+}
+
+.email {
+  font: var(--font-m);
+  color: var(--iconDefaultColor);
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.editBtn,
+.logoutBtn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font: var(--font-m);
+  font-weight: 500;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.editBtn {
+  background: var(--hover);
+  color: var(--iconActiveColor);
+
+  &:hover {
+    background: var(--focus);
+  }
+}
+
+.logoutBtn {
+  background: var(--secondary-color);
+  color: var(--iconDefaultColor);
+
+  &:hover {
+    background: var(--hover);
+    color: var(--iconActiveColor);
+  }
+}

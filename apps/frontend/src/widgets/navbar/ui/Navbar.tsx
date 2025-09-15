@@ -6,13 +6,40 @@ import { NavbarItem } from '@/shared/NavbarItem';
 import { Link } from 'react-router-dom';
 import TimerIcon from '@/shared/assets/icons/timer_icon.svg?react';
 import CalendarIcon from '@/shared/assets/icons/calendar_icon.svg?react';
-import AccountIcon from '@/shared/assets/icons/account_icon.svg?react';
+import { AccountButton } from '@/shared/AccountButton/AccountButton';
+import UserProfile from '@/features/components/UserProfile/UserProfile';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const [isProfileOpen, setIsProfileOpen] = React.useState(false);
 
   const handleOpen = () => {
     setIsOpen((prev) => !prev);
+  };
+
+  const handleProfileOpen = () => {
+    setIsProfileOpen(true);
+  };
+
+  const handleProfileClose = () => {
+    setIsProfileOpen(false);
+  };
+
+  const handleLogout = () => {
+    console.log('Logout');
+    setIsProfileOpen(false);
+  };
+
+  const handleEdit = () => {
+    console.log('Edit profile');
+    setIsProfileOpen(false);
+  };
+
+  // Тестовые данные пользователя
+  const user = {
+    name: 'John Doe',
+    email: 'john@example.com',
+    avatar: undefined,
   };
 
   return (
@@ -32,12 +59,14 @@ export const Navbar = () => {
         </div>
 
         <div className={cn(cls.settingsIcon)}>
-          <NavbarItem
-            handleOpen={handleOpen}
-            to="/account"
-            icon={AccountIcon}
-            title="Аккаунт"
-            disableBackground={true}
+          <AccountButton onClick={handleProfileOpen} title="Аккаунт" />
+
+          <UserProfile
+            user={user}
+            isOpen={isProfileOpen}
+            onClose={handleProfileClose}
+            onEdit={handleEdit}
+            onLogout={handleLogout}
           />
         </div>
       </div>
