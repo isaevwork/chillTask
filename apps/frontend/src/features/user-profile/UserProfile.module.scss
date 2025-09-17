@@ -1,4 +1,4 @@
-@use '../../../app/styles/variables/global.scss';
+@use '../../app/styles/variables/global.scss';
 
 .userProfile {
   padding: 24px;
@@ -41,6 +41,7 @@
 
 .name {
   font: var(--font-l);
+  font-weight: 600;
   margin: 0 0 8px 0;
   color: var(--iconActiveColor);
 }
@@ -64,7 +65,7 @@
   border-radius: var(--border-radius);
   cursor: pointer;
   font: var(--font-m);
-  font-weight: 500;
+  font-weight: 400;
   transition: all 0.3s;
 
   &:hover {

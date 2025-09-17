@@ -1,0 +1,98 @@
+@use '../../../app/styles/variables/global.scss';
+
+.loginPopup {
+  background: var(--primary-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  max-width: 450px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease-out;
+  border: 1px solid var(--secondary-color);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.header {
+  padding: 32px 32px 0 32px;
+  text-align: center;
+  border-bottom: 1px solid var(--secondary-color);
+  margin-bottom: 24px;
+}
+
+.title {
+  font: var(--font-l);
+  font-weight: 600;
+  color: var(--iconActiveColor);
+  margin: 0 0 8px 0;
+}
+
+.subtitle {
+  font: var(--font-m);
+  color: var(--iconDefaultColor);
+  margin: 0 0 24px 0;
+}
+
+.content {
+  padding: 0 32px 24px 32px;
+}
+
+.footer {
+  padding: 0 32px 32px 32px;
+  text-align: center;
+  border-top: 1px solid var(--secondary-color);
+  padding-top: 24px;
+}
+
+.footerText {
+  font: var(--font-m);
+  color: var(--iconDefaultColor);
+  margin: 0;
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: var(--iconActiveColor);
+  font: var(--font-m);
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--iconDefaultColor);
+    transform: scale(1.05);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .loginPopup {
+    margin: 20px;
+    max-width: none;
+    width: calc(100% - 40px);
+  }
+
+  .header,
+  .content,
+  .footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}

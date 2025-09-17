@@ -34,8 +34,7 @@
 }
 
 .iconTitle {
-  font-size: 11px;
-  font-family: 'monospace', sans-serif;
-  line-height: 24px;
+  font: var(--font-s);
   color: var(--iconDefaultColor);
+  font-weight: 400;
 }
